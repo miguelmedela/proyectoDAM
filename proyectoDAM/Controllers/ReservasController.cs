@@ -66,18 +66,25 @@ namespace proyectoDAM.Controllers
 
 
     }
-
-
-
+    
     public class ReservasController : ApiController
     {
         Reserva reserva = new Reserva();
         // GET: Reservas
+        [HttpGet]
         public IEnumerable<Reserva> Get()
         {
+           
             IList lista = (IList)reserva;
-
             return (IEnumerable<Reserva>)lista;
         }
+
+        //[HttpGet]
+        //public Reserva Get(int id)
+        //{
+           
+        //   //var res =  reserva.ToString().FirstOrDefault(x=> x.IdReserva == id) ;
+        //    return res;
+        //}
     }
 }
