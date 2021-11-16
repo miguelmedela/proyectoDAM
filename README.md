@@ -31,3 +31,4 @@ Creación del repositorio
 # 16/11/2021
 ### Hoy estuve completando el funcionamiento de la API y probando todos los métodos así como haciendo pruebas unitarias para verificar que no haya fallos.
 ### También he incorporado el paquete Nuget de Swagger para poder poner comentarios en la vista web de la API.
+### He cambiado el branch default a probando que es donde estoy actualizando todo
