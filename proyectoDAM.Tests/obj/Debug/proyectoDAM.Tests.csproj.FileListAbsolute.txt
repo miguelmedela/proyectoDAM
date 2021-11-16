@@ -47,7 +47,6 @@ C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\es\System.We
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\es\System.Web.Optimization.resources.dll
-C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\obj\Debug\proyectoDAM.Tests.csprojAssemblyReference.cache
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\obj\Debug\proyectoDAM.Tests.csproj.CoreCompileInputs.cache
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\obj\Debug\proyectoDAM.Tests.csproj.CopyComplete
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\obj\Debug\proyectoDAM.Tests.dll
@@ -55,3 +54,9 @@ C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\obj\Debug\proyectoDAM.
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\WebGrease.dll
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\Antlr3.Runtime.dll
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\Antlr3.Runtime.pdb
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\obj\Debug\proyectoDAM.Tests.csproj.AssemblyReference.cache
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\ProyectoDam.Datos.dll
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\EntityFramework.dll
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\ProyectoDam.Datos.pdb
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\ProyectoDam.Datos.dll.config
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\EntityFramework.xml

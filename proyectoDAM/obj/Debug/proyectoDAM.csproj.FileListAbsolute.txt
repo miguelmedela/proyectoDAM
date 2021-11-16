@@ -88,8 +88,15 @@ C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\es\System.Web.Razor.reso
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\es\System.Web.WebPages.resources.dll
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\obj\Debug\proyectoDAM.csprojAssemblyReference.cache
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\obj\Debug\proyectoDAM.csproj.CoreCompileInputs.cache
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\obj\Debug\proyectoDAM.csproj.CopyComplete
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\obj\Debug\proyectoDAM.dll
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\obj\Debug\proyectoDAM.pdb
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\EntityFramework.dll
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\EntityFramework.SqlServer.dll
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\ProyectoDam.Datos.dll
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\ProyectoDam.Datos.pdb
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\ProyectoDam.Datos.dll.config
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\EntityFramework.xml
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\EntityFramework.SqlServer.xml
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\obj\Debug\proyectoDAM.csproj.AssemblyReference.cache

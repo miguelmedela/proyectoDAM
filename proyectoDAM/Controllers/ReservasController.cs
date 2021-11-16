@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoDam.Datos.Model;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,83 +10,83 @@ using System.Web.Http;
 
 namespace proyectoDAM.Controllers
 {
-    public enum tipoHab
-    {
-        individual,
-        dobleMAt,
-        doble,
-        triple
-    }
-
-    public class Reserva
-    {
-        int idReserva, dias;
-        string nombre, apellido;
-        tipoHab habitacion;
-        DateTime fechaEntrada;
-        double [] precio;
-        bool desayuno;
-        bool garaje;
-        string comentarios;
-        
-
-        public int IdReserva { get => idReserva; set => idReserva = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Apellido { get => apellido; set => apellido = value; }
-        public tipoHab Habitacion { get => habitacion; set => habitacion = value; }
-        public DateTime FechaEntrada { get => fechaEntrada; set => fechaEntrada = value; }
-        public int Dias { get => dias; set => dias = value; }
-        public double[] Precio { get => precio; set => precio = value; }
-        public bool Desayuno { get => desayuno; set => desayuno = value; }
-        public bool Garaje { get => garaje; set => garaje = value; }
-        public string Comentarios { get => comentarios; set => comentarios = value; }
-        
-
-        public Reserva()
-        {
-
-        }
-
-
-        public Reserva(int idReserva, string nombre, string apellido,
-            tipoHab habitacion, DateTime fechaEntrada, int dias, double[] precio,
-            bool desayuno, bool garaje, string comentarios )
-        {
-            IdReserva = idReserva;
-            Nombre = nombre;
-            Apellido = apellido;
-            Habitacion = habitacion;
-            FechaEntrada = fechaEntrada;
-            Dias = dias;
-            Precio = precio;
-            Desayuno = desayuno;
-            Garaje = garaje;
-            Comentarios = comentarios;
-            
-        }
-
-
-    }
-    
-
     public class ReservasController : ApiController
     {
-        Reserva reserva = new Reserva();
-        // GET: Reservas
+        //LibreriaConnection BD2 = new LibreriaConnection();
+
+        ReservasEntities1 BD = new ReservasEntities1();
+
+        //Permite consultar la información de todas las reservas
+        //contenidas en la base de datos
+
         [HttpGet]
-        public IEnumerable<Reserva> Get()
+        public IEnumerable<Reservorio> Get()
         {
-           
-            IList lista = (IList)reserva;
-            return (IEnumerable<Reserva>)lista;
+            var listado = BD.Reservorio.ToList();
+            return listado;
         }
 
+
+        //Devuelve la reserva contenida en la base de datos
+        //con el IDReserva correspondiente
+        [HttpGet]
+        public Reservorio Get(int id)
+        {
+            //var res = BD2.Reserva.FirstOrDefault(x => x.idReserva == id);
+
+
+            var res = BD.Reservorio.FirstOrDefault(x => x.idReserva == id);
+            return res;
+        }
+
+
+        //por fecha--ahora mismo peta -->No sé si será util igualmente 
         //[HttpGet]
-        //public Reserva Get(int id)
+        //public IEnumerable<Reservorio> Get(DateTime d)
         //{
-           
-        //   //var res =  reserva.ToString().FirstOrDefault(x=> x.IdReserva == id) ;
-        //    return res;
+
+        //    var fecha = BD.Reservorio.ToList();
+        //    return fecha.ToList();
         //}
+
+
+
+        //Tengo que hacer que me pueda leer bien esto
+        [HttpPost]
+        public IHttpActionResult PostNewReserva(Models.ReservaP.Class1 res)
+        {
+
+            if (!ModelState.IsValid)
+                return BadRequest("Invalid data.");
+            try
+            {
+                using (var r = new ReservasEntities1())
+                {
+                    r.Reservorio.Add(new Reservorio()
+                    {
+                        idReserva = res.idReserva,
+                        nombre = res.nombre,
+                        apellidos = res.apellidos,
+                        tipoHab = res.tipoHab,
+                        fechaEntrada = res.fechaEntrada,
+                        dias = res.dias,
+                        precio = res.precio,
+                        desayuno = res.desayuno,
+                        garaje = res.garaje,
+                        comentarios = res.comentarios
+                    });
+                    r.SaveChanges();
+                }
+
+            }
+            catch (NullReferenceException)
+            {
+
+                Console.WriteLine("Objeto nulo");
+            }
+
+            return Ok();
+        }
+
     }
 }

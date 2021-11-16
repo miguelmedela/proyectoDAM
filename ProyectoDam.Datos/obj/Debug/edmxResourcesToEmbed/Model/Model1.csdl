@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
-  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="ReservaSet" EntityType="Model1.Reserva" />
-  </EntityContainer>
+<Schema Namespace="ReservasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Reserva">
     <Key>
-      <PropertyRef Name="IdReserva" />
+      <PropertyRef Name="idReserva" />
     </Key>
-    <Property Name="IdReserva" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" Nullable="false" />
-    <Property Name="Apellido" Type="String" Nullable="false" />
-    <Property Name="Habitacion" Type="String" Nullable="false" />
-    <Property Name="Entrada" Type="String" Nullable="false" />
-    <Property Name="Dias" Type="String" Nullable="false" />
-    <Property Name="Precio" Type="String" Nullable="false" />
-    <Property Name="Desayuno" Type="String" Nullable="false" />
-    <Property Name="Garaje" Type="String" Nullable="false" />
-    <Property Name="Comentarios" Type="String" Nullable="false" />
+    <Property Name="idReserva" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tipoHab" Type="Int32" Nullable="false" />
+    <Property Name="fechaEntrada" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dias" Type="Int32" Nullable="false" />
+    <Property Name="precio" Type="Double" Nullable="false" />
+    <Property Name="desayuno" Type="Int32" />
+    <Property Name="garaje" Type="Int32" />
+    <Property Name="comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityContainer Name="LibreriaConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Reserva" EntityType="Self.Reserva" />
+  </EntityContainer>
 </Schema>

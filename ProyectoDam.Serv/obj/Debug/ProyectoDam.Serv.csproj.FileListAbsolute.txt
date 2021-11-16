@@ -1,0 +1,15 @@
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\ProyectoDam.Serv.exe.config
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\ProyectoDam.Serv.exe
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\ProyectoDam.Serv.pdb
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\obj\Debug\ProyectoDam.Serv.csproj.AssemblyReference.cache
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\obj\Debug\ProyectoDam.Serv.csproj.CoreCompileInputs.cache
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\obj\Debug\ProyectoDam.Serv.exe
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\obj\Debug\ProyectoDam.Serv.pdb
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\Newtonsoft.Json.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\ProyectoDam.Datos.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\EntityFramework.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\ProyectoDam.Datos.pdb
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\ProyectoDam.Datos.dll.config
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\Newtonsoft.Json.xml
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\EntityFramework.xml
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\obj\Debug\ProyectoDam.Serv.csproj.CopyComplete
