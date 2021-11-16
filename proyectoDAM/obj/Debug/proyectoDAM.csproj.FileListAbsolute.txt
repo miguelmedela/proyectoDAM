@@ -100,3 +100,6 @@ C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\ProyectoDam.Datos.dll.co
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\EntityFramework.xml
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\EntityFramework.SqlServer.xml
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\obj\Debug\proyectoDAM.csproj.AssemblyReference.cache
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\proyectoDAM.xml
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\Swashbuckle.Core.dll
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM\bin\WebActivatorEx.dll

@@ -60,3 +60,6 @@ C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\EntityFramew
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\ProyectoDam.Datos.pdb
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\ProyectoDam.Datos.dll.config
 C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\EntityFramework.xml
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\Swashbuckle.Core.dll
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\migui\source\repos\proyectoDAM\proyectoDAM.Tests\bin\Debug\proyectoDAM.xml

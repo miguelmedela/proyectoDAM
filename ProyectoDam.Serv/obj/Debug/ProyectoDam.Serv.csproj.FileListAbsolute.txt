@@ -13,3 +13,11 @@ C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\ProyectoDam.D
 C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\Newtonsoft.Json.xml
 C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\EntityFramework.xml
 C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\obj\Debug\ProyectoDam.Serv.csproj.CopyComplete
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\System.Web.Http.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\WebActivatorEx.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\System.Web.Http.xml
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Serv\bin\Debug\System.Web.Http.WebHost.xml

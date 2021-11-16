@@ -39,53 +39,103 @@ namespace proyectoDAM.Controllers
             return res;
         }
 
-
-        //por fecha--ahora mismo peta -->No sé si será util igualmente 
-        //[HttpGet]
-        //public IEnumerable<Reservorio> Get(DateTime d)
-        //{
-
-        //    var fecha = BD.Reservorio.ToList();
-        //    return fecha.ToList();
-        //}
-
-
-
-        //Tengo que hacer que me pueda leer bien esto
+        //Crea un nuevo registro en la base de datos
         [HttpPost]
-        public IHttpActionResult PostNewReserva(Models.ReservaP.Class1 res)
+        public bool Post(Reservorio reserva)
         {
-
-            if (!ModelState.IsValid)
-                return BadRequest("Invalid data.");
             try
             {
-                using (var r = new ReservasEntities1())
+                BD.Reservorio.Add(reserva);
+                return BD.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("No se guardó en la base de datos");
+                return false;
+            }
+        }
+        //Modifica un registro existente en la base de datos
+
+        /// <summary>
+        /// Gets the resource property descriptions.
+        /// </summary>
+        [HttpPut]
+        public bool Put(Reservorio res)
+        {
+            bool flag = true;
+            try
+            {
+                var reservaActualizar = BD.Reservorio.FirstOrDefault(x => x.idReserva == res.idReserva);
+                if (reservaActualizar == null)
                 {
-                    r.Reservorio.Add(new Reservorio()
+                    flag = false;
+                }
+                if (flag)
+                {
+                    try
                     {
-                        idReserva = res.idReserva,
-                        nombre = res.nombre,
-                        apellidos = res.apellidos,
-                        tipoHab = res.tipoHab,
-                        fechaEntrada = res.fechaEntrada,
-                        dias = res.dias,
-                        precio = res.precio,
-                        desayuno = res.desayuno,
-                        garaje = res.garaje,
-                        comentarios = res.comentarios
-                    });
-                    r.SaveChanges();
+                        reservaActualizar.nombre = res.nombre;
+                        reservaActualizar.apellidos = res.apellidos;
+                        reservaActualizar.tipoHab = res.tipoHab;
+                        reservaActualizar.fechaEntrada = res.fechaEntrada;
+                        reservaActualizar.dias = res.dias;
+                        reservaActualizar.precio = res.precio;
+                        reservaActualizar.desayuno = res.desayuno;
+                        reservaActualizar.garaje = res.garaje;
+                        reservaActualizar.comentarios = res.comentarios;
+
+                        return BD.SaveChanges() > 0;
+                    }
+                    catch (Exception)
+                    {
+                        flag = false;
+                        Console.WriteLine("Error a la hora de modificar en la base de datos");
+                    }
+                }
+            }
+            //Capturo error por si no existiera en la base de datos para modificar
+            catch (Exception)
+            {
+                flag = false;
+                return false;
+            }
+
+            return flag;
+        }
+
+
+        //Elimina un registro existente en la base de datos
+        [HttpDelete]
+        public bool Delete(int idReserva)
+        {
+            bool flagDelete = true;
+            try
+            {
+                var reservaEliminar = BD.Reservorio.FirstOrDefault(x => x.idReserva == idReserva);
+                if (flagDelete)
+                {
+                    BD.Reservorio.Remove(reservaEliminar);
+
+                    try
+                    {
+                        return BD.SaveChanges() > 0;
+                    }
+                    catch (Exception)
+                    {
+                        flagDelete = false;
+                        return false;
+                    }
                 }
 
             }
-            catch (NullReferenceException)
+            //Capturo error por si no existiera en la base de datos para borrar
+            catch (ArgumentNullException)
             {
-
-                Console.WriteLine("Objeto nulo");
+                flagDelete = false;
+                Console.WriteLine("Error a la hora de borrar elemento de la base de datos");
             }
 
-            return Ok();
+            return flagDelete;
         }
 
     }

@@ -10,3 +10,13 @@ C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\EntityFramew
 C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\obj\Debug\ProyectoDam.Datos.csproj.CopyComplete
 C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\obj\Debug\ProyectoDam.Datos.csproj.AssemblyReference.cache
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\System.Web.Http.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\WebActivatorEx.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\System.Web.Http.xml
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\System.Web.Http.WebHost.xml
