@@ -1,0 +1,7 @@
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\ProyectoDam.Datos.dll.config
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\ProyectoDam.Datos.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\bin\Debug\ProyectoDam.Datos.pdb
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\obj\Debug\ProyectoDam.Datos.csprojAssemblyReference.cache
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\obj\Debug\ProyectoDam.Datos.csproj.CoreCompileInputs.cache
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\obj\Debug\ProyectoDam.Datos.dll
+C:\Users\migui\source\repos\proyectoDAM\ProyectoDam.Datos\obj\Debug\ProyectoDam.Datos.pdb
