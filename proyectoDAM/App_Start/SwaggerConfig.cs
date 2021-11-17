@@ -10,11 +10,15 @@ namespace proyectoDAM
 {
     public class SwaggerConfig
     {
+        /// <summary>
+        /// Obtenemos la ruta del archivo XML de documentación
+        /// </summary>
+        /// <returns></returns>
 
-        //protected static string GetXmlCommentsPath()
-        //{
-        //    return Path.Combine(System.Web.HttpRuntime, "bin", "proyectoDAM.xml");
-        //}
+        protected static string GetXmlCommentsPath()
+        {
+            return Path.Combine(System.Web.HttpRuntime.AppDomainAppPath, "bin", "proyectoDAM.xml"); 
+        }
 
         public static void Register()
         {
@@ -39,11 +43,14 @@ namespace proyectoDAM
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "proyectoDAM");
+                        c.SingleApiVersion("v1", "proyectoDAM").Description("Proyecto es una aplicación" +
+                            "construida en .Net Framework para control de reservas").
+                            Contact(x=> x.Name("Miguel Medela")).Contact(x=> x.Email("miguelmedelafernandez@gmail.com"));
+                        
 
                         // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
                         //
-                        //c.PrettyPrint();
+                        c.PrettyPrint();
 
                         // If your API has multiple versions, use "MultipleApiVersions" instead of "SingleApiVersion".
                         // In this case, you must provide a lambda that tells Swashbuckle which actions should be
@@ -68,11 +75,11 @@ namespace proyectoDAM
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
-                        //c.ApiKey("apiKey")
-                        //    .Description("API Key Authentication")
-                        //    .Name("apiKey")
-                        //    .In("header");
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        c.ApiKey("Authorization")
+                            .Description("Introduce el token JWT aqui")
+                            .Name("Bearer")
+                            .In("header");
                         //
                         //c.OAuth2("oauth2")
                         //    .Description("OAuth2 Implicit Grant")
@@ -108,7 +115,7 @@ namespace proyectoDAM
                         // those comments into the generated docs and UI. You can enable this by providing the path to one or
                         // more Xml comment files.
                         //
-                        //c.IncludeXmlComments(GetXmlCommentsPath());
+                        c.IncludeXmlComments(GetXmlCommentsPath());
 
                         // Swashbuckle makes a best attempt at generating Swagger compliant JSON schemas for the various types
                         // exposed in your API. However, there may be occasions when more control of the output is needed.
@@ -255,7 +262,7 @@ namespace proyectoDAM
                         // If your API supports ApiKey, you can override the default values.
                         // "apiKeyIn" can either be "query" or "header"
                         //
-                        //c.EnableApiKeySupport("apiKey", "header");
+                        c.EnableApiKeySupport("Authorization", "header");
                     });
         }
     }

@@ -6,10 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using System.Web.Http.Description;
 
 namespace proyectoDAM.Controllers
-{
+{   
+    /// <summary>
+    /// Clase controlador de reservas.
+    /// Gestiona los métodos GET, GET(id), POST, PUT y DELETE.
+    /// </summary>
     public class ReservasController : ApiController
     {
         //LibreriaConnection BD2 = new LibreriaConnection();
@@ -19,28 +23,46 @@ namespace proyectoDAM.Controllers
         //Permite consultar la información de todas las reservas
         //contenidas en la base de datos
 
+
+        /// <summary>
+        /// Obtiene los objetos del reservorio.
+        /// </summary>
+        /// <returns>Listado de los objetos de reservorio.</returns>
+        /// <response code='200'>Devuelve el listado de objetos solicitado.</response>
         [HttpGet]
+        [ResponseType(typeof(IEnumerable<Reservorio>))]
         public IEnumerable<Reservorio> Get()
         {
+
             var listado = BD.Reservorio.ToList();
             return listado;
         }
 
-
-        //Devuelve la reserva contenida en la base de datos
-        //con el IDReserva correspondiente
+        /// <summary>
+        /// Obtiene el objeto reserva por su id.
+        /// </summary>
+        /// <param name="id">Id del objeto.</param>
+        /// <returns>Devuelve un único objeto del reservorio.</returns>
+        /// <response code='200'>Devuelve la reserva solicitada.</response>
+        /// <response code='404'>Not found.</response>
         [HttpGet]
+        [ResponseType(typeof(Reservorio))]
         public Reservorio Get(int id)
         {
-            //var res = BD2.Reserva.FirstOrDefault(x => x.idReserva == id);
 
-
-            var res = BD.Reservorio.FirstOrDefault(x => x.idReserva == id);
-            return res;
+                var res = BD.Reservorio.FirstOrDefault(x => x.idReserva == id);
+                return res;
+            
         }
 
-        //Crea un nuevo registro en la base de datos
+        /// <summary>
+        /// Crea un nuevo objeto reserva.
+        /// </summary>
+        /// <param name="reserva">Objeto reserva.</param>
+        /// <returns>Devuelve true o false.</returns>
+        /// <Response code='200'>Se ha creado correctamente la reserva.</Response>
         [HttpPost]
+        [ResponseType(typeof(Reservorio))]
         public bool Post(Reservorio reserva)
         {
             try
@@ -57,9 +79,14 @@ namespace proyectoDAM.Controllers
         //Modifica un registro existente en la base de datos
 
         /// <summary>
-        /// Gets the resource property descriptions.
+        /// Modifica una reserva existente en la base de datos.
         /// </summary>
+        /// <param name="res">Objeto reserva objetivo de modificacion.</param>
+        /// <returns>Devuelve true o false.</returns>
+        /// <Response code='200'>Se ha modificado correctamente la reserva.</Response>
+        /// <Response code='404'>Not found.</Response>
         [HttpPut]
+        [ResponseType(typeof(Reservorio))]
         public bool Put(Reservorio res)
         {
             bool flag = true;
@@ -104,8 +131,15 @@ namespace proyectoDAM.Controllers
         }
 
 
-        //Elimina un registro existente en la base de datos
+        /// <summary>
+        /// Elimina una reserva.
+        /// </summary>
+        /// <param name="idReserva">Id del objeto.</param>
+        /// <returns>Devuelve true o false.</returns>
+        /// <Response code='200'>Se ha eliminado la reserva.</Response>
+        /// <Response code='404'>Not found.</Response>
         [HttpDelete]
+        [ResponseType(typeof(Reservorio))]
         public bool Delete(int idReserva)
         {
             bool flagDelete = true;

@@ -4,6 +4,12 @@
         <name>proyectoDAM</name>
     </assembly>
     <members>
+        <member name="M:proyectoDAM.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            Obtenemos la ruta del archivo XML de documentación
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:proyectoDAM.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
@@ -481,10 +487,53 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:proyectoDAM.Controllers.ReservasController">
+            <summary>
+            Clase controlador de reservas.
+            Gestiona los métodos GET, GET(id), POST, PUT y DELETE.
+            </summary>
+        </member>
+        <member name="M:proyectoDAM.Controllers.ReservasController.Get">
+            <summary>
+            Obtiene los objetos del reservorio.
+            </summary>
+            <returns>Listado de los objetos de reservorio.</returns>
+            <response code='200'>Devuelve el listado de objetos solicitado.</response>
+        </member>
+        <member name="M:proyectoDAM.Controllers.ReservasController.Get(System.Int32)">
+            <summary>
+            Obtiene el objeto reserva por su id.
+            </summary>
+            <param name="id">Id del objeto.</param>
+            <returns>Devuelve un único objeto del reservorio.</returns>
+            <response code='200'>Devuelve la reserva solicitada.</response>
+            <response code='404'>Not found.</response>
+        </member>
+        <member name="M:proyectoDAM.Controllers.ReservasController.Post(ProyectoDam.Datos.Model.Reservorio)">
+            <summary>
+            Crea un nuevo objeto reserva.
+            </summary>
+            <param name="reserva">Objeto reserva.</param>
+            <returns>Devuelve true o false.</returns>
+            <Response code='200'>Se ha creado correctamente la reserva.</Response>
+        </member>
         <member name="M:proyectoDAM.Controllers.ReservasController.Put(ProyectoDam.Datos.Model.Reservorio)">
             <summary>
-            Gets the resource property descriptions.
+            Modifica una reserva existente en la base de datos.
             </summary>
+            <param name="res">Objeto reserva objetivo de modificacion.</param>
+            <returns>Devuelve true o false.</returns>
+            <Response code='200'>Se ha modificado correctamente la reserva.</Response>
+            <Response code='404'>Not found.</Response>
+        </member>
+        <member name="M:proyectoDAM.Controllers.ReservasController.Delete(System.Int32)">
+            <summary>
+            Elimina una reserva.
+            </summary>
+            <param name="idReserva">Id del objeto.</param>
+            <returns>Devuelve true o false.</returns>
+            <Response code='200'>Se ha eliminado la reserva.</Response>
+            <Response code='404'>Not found.</Response>
         </member>
     </members>
 </doc>
