@@ -32,3 +32,15 @@
 ### Hoy estuve completando el funcionamiento de la API y probando todos los métodos así como haciendo pruebas unitarias para verificar que no haya fallos.
 ### También he incorporado el paquete Nuget de Swagger para poder poner comentarios en la vista web de la API.
 ### He cambiado el branch default a probando que es donde estoy actualizando todo
+
+
+
+# 17/11/2021
+### Esto juraría que lo había dejado escrito ayer.
+### Estuve documentando toda la Api así como implementando Swagger para poder realizar peticiones HTTP desde la propia ejecución de la API.
+### Esto resulta muy práctico ya que no se necesita la utilización de terceros programas.
+
+# 18/11/2021 
+### Hoy he encontrado un fallo con la id de la reserva que me llevo un buen rato solucionar, tuve que añadir un nuevo campo a la tabla de la base de datos.
+### Esto es debido a que cuando realizo un post en la base de datos al ser autoincremento no podía seleccionar yo mismo el id de reserva.
+### Esto lo solucioné al crear un campo idReservaOnline que a la hora de realizar el post coja el valor de idReserva y se actualice.
