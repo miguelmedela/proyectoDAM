@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Reservorio">
       <EntityTypeMapping TypeName="ReservasModel1.Reservorio">
         <MappingFragment StoreEntitySet="Reservorio">
+          <ScalarProperty Name="idResOnline" ColumnName="idResOnline" />
           <ScalarProperty Name="idReserva" ColumnName="idReserva" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="apellidos" ColumnName="apellidos" />

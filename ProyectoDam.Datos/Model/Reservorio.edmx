@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ReservasModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ReservasModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Reservorio">
           <Key>
             <PropertyRef Name="idReserva" />
@@ -19,12 +19,12 @@
           <Property Name="desayuno" Type="bit" />
           <Property Name="garaje" Type="bit" />
           <Property Name="comentarios" Type="text" />
+          <Property Name="idResOnline" Type="int" />
         </EntityType>
         <EntityContainer Name="ReservasModel1StoreContainer">
           <EntitySet Name="Reservorio" EntityType="Self.Reservorio" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ReservasModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -42,6 +42,7 @@
           <Property Name="desayuno" Type="Boolean" />
           <Property Name="garaje" Type="Boolean" />
           <Property Name="comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="idResOnline" Type="Int32" />
         </EntityType>
         <EntityContainer Name="ReservasEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Reservorio" EntityType="Self.Reservorio" />
@@ -55,6 +56,7 @@
           <EntitySetMapping Name="Reservorio">
             <EntityTypeMapping TypeName="ReservasModel1.Reservorio">
               <MappingFragment StoreEntitySet="Reservorio">
+                <ScalarProperty Name="idResOnline" ColumnName="idResOnline" />
                 <ScalarProperty Name="idReserva" ColumnName="idReserva" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="apellidos" ColumnName="apellidos" />

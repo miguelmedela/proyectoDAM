@@ -24,5 +24,6 @@ namespace ProyectoDam.Datos.Model
         public Nullable<bool> desayuno { get; set; }
         public Nullable<bool> garaje { get; set; }
         public string comentarios { get; set; }
+        public Nullable<int> idResOnline { get; set; }
     }
 }

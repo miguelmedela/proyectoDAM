@@ -14,6 +14,7 @@
     <Property Name="desayuno" Type="Boolean" />
     <Property Name="garaje" Type="Boolean" />
     <Property Name="comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="idResOnline" Type="Int32" />
   </EntityType>
   <EntityContainer Name="ReservasEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Reservorio" EntityType="Self.Reservorio" />

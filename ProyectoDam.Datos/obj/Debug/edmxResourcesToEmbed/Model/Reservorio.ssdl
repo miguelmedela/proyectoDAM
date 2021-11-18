@@ -14,6 +14,7 @@
     <Property Name="desayuno" Type="bit" />
     <Property Name="garaje" Type="bit" />
     <Property Name="comentarios" Type="text" />
+    <Property Name="idResOnline" Type="int" />
   </EntityType>
   <EntityContainer Name="ReservasModel1StoreContainer">
     <EntitySet Name="Reservorio" EntityType="Self.Reservorio" Schema="dbo" store:Type="Tables" />

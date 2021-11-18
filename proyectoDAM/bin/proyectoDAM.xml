@@ -493,14 +493,14 @@
             Gestiona los métodos GET, GET(id), POST, PUT y DELETE.
             </summary>
         </member>
-        <member name="M:proyectoDAM.Controllers.ReservasController.Get">
+        <member name="M:proyectoDAM.Controllers.ReservasController.GETall">
             <summary>
             Obtiene los objetos del reservorio.
             </summary>
             <returns>Listado de los objetos de reservorio.</returns>
             <response code='200'>Devuelve el listado de objetos solicitado.</response>
         </member>
-        <member name="M:proyectoDAM.Controllers.ReservasController.Get(System.Int32)">
+        <member name="M:proyectoDAM.Controllers.ReservasController.GetId(System.Int32)">
             <summary>
             Obtiene el objeto reserva por su id.
             </summary>
@@ -508,14 +508,16 @@
             <returns>Devuelve un único objeto del reservorio.</returns>
             <response code='200'>Devuelve la reserva solicitada.</response>
             <response code='404'>Not found.</response>
+            
         </member>
         <member name="M:proyectoDAM.Controllers.ReservasController.Post(ProyectoDam.Datos.Model.Reservorio)">
             <summary>
             Crea un nuevo objeto reserva.
             </summary>
             <param name="reserva">Objeto reserva.</param>
-            <returns>Devuelve true o false.</returns>
+            <returns>Devuelve un response.</returns>
             <Response code='200'>Se ha creado correctamente la reserva.</Response>
+            <response code='400'>Bad request.</response> 
         </member>
         <member name="M:proyectoDAM.Controllers.ReservasController.Put(ProyectoDam.Datos.Model.Reservorio)">
             <summary>
@@ -532,7 +534,7 @@
             </summary>
             <param name="idReserva">Id del objeto.</param>
             <returns>Devuelve true o false.</returns>
-            <Response code='200'>Se ha eliminado la reserva.</Response>
+            <Response code='204'>Se ha eliminado la reserva.</Response>
             <Response code='404'>Not found.</Response>
         </member>
     </members>
