@@ -507,8 +507,6 @@
             <param name="id">Id del objeto.</param>
             <returns>Devuelve un único objeto del reservorio.</returns>
             <response code='200'>Devuelve la reserva solicitada.</response>
-            <response code='404'>Not found.</response>
-            
         </member>
         <member name="M:proyectoDAM.Controllers.ReservasController.Post(ProyectoDam.Datos.Model.Reservorio)">
             <summary>
@@ -517,25 +515,22 @@
             <param name="reserva">Objeto reserva.</param>
             <returns>Devuelve un response.</returns>
             <Response code='200'>Se ha creado correctamente la reserva.</Response>
-            <response code='400'>Bad request.</response> 
         </member>
         <member name="M:proyectoDAM.Controllers.ReservasController.Put(ProyectoDam.Datos.Model.Reservorio)">
             <summary>
             Modifica una reserva existente en la base de datos.
             </summary>
             <param name="res">Objeto reserva objetivo de modificacion.</param>
-            <returns>Devuelve true o false.</returns>
-            <Response code='200'>Se ha modificado correctamente la reserva.</Response>
-            <Response code='404'>Not found.</Response>
+            <returns>Devuelve un response.</returns>
+            <Response code='200'>Se ha modificado la reserva.</Response>
         </member>
         <member name="M:proyectoDAM.Controllers.ReservasController.Delete(System.Int32)">
             <summary>
             Elimina una reserva.
             </summary>
             <param name="idReserva">Id del objeto.</param>
-            <returns>Devuelve true o false.</returns>
+            <returns>Devuelve un response.</returns>
             <Response code='204'>Se ha eliminado la reserva.</Response>
-            <Response code='404'>Not found.</Response>
         </member>
     </members>
 </doc>

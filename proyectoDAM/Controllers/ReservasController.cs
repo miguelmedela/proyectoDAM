@@ -21,22 +21,6 @@ namespace proyectoDAM.Controllers
         ReservasEntities1 BD = new ReservasEntities1();
 
 
-        ///// <summary>
-        ///// Obtiene los objetos del reservorio.
-        ///// </summary>
-        ///// <returns>Listado de los objetos de reservorio.</returns>
-        ///// <response code='200'>Devuelve el listado de objetos solicitado.</response>
-        //[HttpGet]
-        //[ResponseType(typeof(IEnumerable<Reservorio>))]
-        //public IEnumerable<Reservorio> Get()
-        //{
-
-        //    var listado = BD.Reservorio.ToList();
-        //    return listado;
-        //}
-
-
-
         /// <summary>
         /// Obtiene los objetos del reservorio.
         /// </summary>
@@ -56,25 +40,20 @@ namespace proyectoDAM.Controllers
         /// <param name="id">Id del objeto.</param>
         /// <returns>Devuelve un único objeto del reservorio.</returns>
         /// <response code='200'>Devuelve la reserva solicitada.</response>
-        /// <response code='404'>Not found.</response>
-        /// 
-        //[HttpGet]
-        //[ResponseType(typeof(Reservorio))]
-        //public Reservorio Get(int id)
-        //{
-        //    var res = BD.Reservorio.FirstOrDefault(x => x.idResOnline == id);
-        //    return res;
-
-        //}
-
         [HttpGet]
-        [ResponseType(typeof(Reservorio))]
-        public async Task<Reservorio> GetId(int id)
+        [ResponseType(typeof(object))]
+        public async Task<object> GetId(int id)
         {
-            
-            var res = await BD.Set<Reservorio>().FindAsync(id);
-            return res;
 
+            var res = await Task.FromResult(BD.Reservorio.Where(x => x.idResOnline == id).SingleOrDefault());
+            if (res == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return res;
+            }
         }
 
 
@@ -84,53 +63,55 @@ namespace proyectoDAM.Controllers
         /// <param name="reserva">Objeto reserva.</param>
         /// <returns>Devuelve un response.</returns>
         /// <Response code='200'>Se ha creado correctamente la reserva.</Response>
-        /// <response code='400'>Bad request.</response> 
         [HttpPost]
         [ResponseType(typeof(IHttpActionResult))]
-        public IHttpActionResult Post(Reservorio reserva)
+        public async Task<IHttpActionResult> Post(Reservorio reserva)
         {
             try
             {
-                if(reserva != null)
+                if (reserva != null)
                 {
                     reserva.idResOnline = reserva.idReserva;
                     BD.Reservorio.Add(reserva);
+
                 }
-                if (BD.SaveChanges() > 0)
+                if (await BD.SaveChangesAsync() > 0)
                 {
-                    return  Ok();
+                    return Ok();
                 }
                 else
-                    return BadRequest();  
+                {
+                    return BadRequest();
+                }
             }
 
             catch (Exception)
             {
                 return BadRequest();
             }
-            
+
         }
 
         /// <summary>
         /// Modifica una reserva existente en la base de datos.
         /// </summary>
         /// <param name="res">Objeto reserva objetivo de modificacion.</param>
-        /// <returns>Devuelve true o false.</returns>
-        /// <Response code='200'>Se ha modificado correctamente la reserva.</Response>
-        /// <Response code='404'>Not found.</Response>
+        /// <returns>Devuelve un response.</returns>
+        /// <Response code='200'>Se ha modificado la reserva.</Response>
         [HttpPut]
-        [ResponseType(typeof(Reservorio))]
-        public bool Put(Reservorio res)
+        [ResponseType(typeof(IHttpActionResult))]
+        public async Task<IHttpActionResult> Put(Reservorio res)
         {
-            bool flag = true;
             try
             {
-                var reservaActualizar = BD.Reservorio.FirstOrDefault(x => x.idResOnline == res.idReserva);
+                var reservaActualizar =
+                await Task.FromResult(BD.Reservorio.Where(x => x.idResOnline == res.idResOnline).SingleOrDefault());
+
                 if (reservaActualizar == null)
                 {
-                    flag = false;
+                    return NotFound();
                 }
-                if (flag)
+                else
                 {
                     try
                     {
@@ -144,24 +125,22 @@ namespace proyectoDAM.Controllers
                         reservaActualizar.garaje = res.garaje;
                         reservaActualizar.comentarios = res.comentarios + " Modificado:" + DateTime.Now;
 
+                        await BD.SaveChangesAsync();
 
-                        return BD.SaveChanges() > 0;
                     }
                     catch (Exception)
                     {
-                        flag = false;
-                        Console.WriteLine("Error a la hora de modificar en la base de datos");
+                        return BadRequest();
                     }
                 }
             }
             //Capturo error por si no existiera en la base de datos para modificar
             catch (Exception)
             {
-                flag = false;
-                return false;
+                return NotFound();
             }
+            return Ok();
 
-            return flag;
         }
 
 
@@ -169,29 +148,26 @@ namespace proyectoDAM.Controllers
         /// Elimina una reserva.
         /// </summary>
         /// <param name="idReserva">Id del objeto.</param>
-        /// <returns>Devuelve true o false.</returns>
+        /// <returns>Devuelve un response.</returns>
         /// <Response code='204'>Se ha eliminado la reserva.</Response>
-        /// <Response code='404'>Not found.</Response>
         [HttpDelete]
-        [ResponseType(typeof(Reservorio))]
-        public bool Delete(int idReserva)
+        [ResponseType(typeof(IHttpActionResult))]
+        public async Task<IHttpActionResult> Delete(int id)
         {
-            bool flagDelete = true;
             try
             {
-                var reservaEliminar = BD.Reservorio.FirstOrDefault(x => x.idResOnline == idReserva);
-                if (flagDelete)
+                var reservaEliminar =
+                    await Task.FromResult(BD.Reservorio.Where(x => x.idResOnline == id).SingleOrDefault());
+                if (reservaEliminar != null)
                 {
                     BD.Reservorio.Remove(reservaEliminar);
-
                     try
                     {
-                        return BD.SaveChanges() > 0;
+                        await BD.SaveChangesAsync();
                     }
                     catch (Exception)
                     {
-                        flagDelete = false;
-                        return false;
+                        return BadRequest();
                     }
                 }
 
@@ -199,11 +175,9 @@ namespace proyectoDAM.Controllers
             //Capturo error por si no existiera en la base de datos para borrar
             catch (ArgumentNullException)
             {
-                flagDelete = false;
-                Console.WriteLine("Error a la hora de borrar elemento de la base de datos");
+                return NotFound();
             }
-
-            return flagDelete;
+            return Ok();
         }
 
     }
