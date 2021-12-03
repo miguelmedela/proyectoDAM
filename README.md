@@ -57,3 +57,12 @@
 ### Hice algunos cambios en los métodos de algunas cosas que no me gustaban (optimización).
 ### Publiqué la API en el servidor IIS de windows 
 ### Me faltaría hacer el consumo de la API
+
+
+# 03/12/2021
+### Cambié un par de cosas en la base de datos después de crear un par de usuarios para poder conectar desde la página web en local publicada por el IIS de windows.
+### En cuanto al IIS republiqué la API después realizar algunos cambios y estuve probando hasta conseguir conectarme. 
+### Al estar publicada la API en iis puedo acceder a ella desde cualquier dispositivo que comparta mi red poniendo en un explorador mi ip... "ip"+/ReservaApi.
+### Haciendo todo esto consigo alojar la API en el servidor de windows y puedo realizar todos los métodos HTTP de la API, actualizando también en la base de datos en caso de hacer POST, PUT y DELETE.
+### Tuve que dar varios permisos al usuario de SQL server que se conectaba desde el iis así como crear una regla en el firewall de windows.
+### Estuve también intentando adaptar este procedimiento pero en vez de que funcionara en una red local que se pudiera conectar desde un ordenador ajeno a mi red, pero aparte de no encontrar forma de hacerlo actualmente, esto no me convence a la hora de implementarlo por temas de seguridad.
