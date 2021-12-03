@@ -44,3 +44,10 @@
 ### Hoy he encontrado un fallo con la id de la reserva que me llevo un buen rato solucionar, tuve que añadir un nuevo campo a la tabla de la base de datos.
 ### Esto es debido a que cuando realizo un post en la base de datos al ser autoincremento no podía seleccionar yo mismo el id de reserva.
 ### Esto lo solucioné al crear un campo idReservaOnline que a la hora de realizar el post coja el valor de idReserva y se actualice.
+
+
+# 01/12/2021
+### Llevaba un par de días viendo videos para aclararme con la programación asíncrona y entender bien como funciona ya que tenía ciertos problemillas con los métodos rest de la Api, también para entender mejor aún como funciona exactamente todo. 
+### El problema del día 18 se fue arrastrando varios días más relacionado con todo el tema de la programación asincrona hasta que logré entender bien como funciona y saber arreglarlo completamente y probar que no fallase.
+### Ya lo tengo todo bastante claro y lo que es la API ya estaría terminada. 
+### Estuve también mirando videos y haciendo un usuario en SQL server para la conexión con la base de datos para que sea lo más simple posible a la hora de probar la aplicación (ya que yo estuve probando en local).
