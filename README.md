@@ -51,3 +51,9 @@
 ### El problema del día 18 se fue arrastrando varios días más relacionado con todo el tema de la programación asincrona hasta que logré entender bien como funciona y saber arreglarlo completamente y probar que no fallase.
 ### Ya lo tengo todo bastante claro y lo que es la API ya estaría terminada. 
 ### Estuve también mirando videos y haciendo un usuario en SQL server para la conexión con la base de datos para que sea lo más simple posible a la hora de probar la aplicación (ya que yo estuve probando en local).
+
+
+# 02/12/2021
+### Hice algunos cambios en los métodos de algunas cosas que no me gustaban (optimización).
+### Publiqué la API en el servidor IIS de windows 
+### Me faltaría hacer el consumo de la API
