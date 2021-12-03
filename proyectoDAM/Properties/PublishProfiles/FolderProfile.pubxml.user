@@ -5,9 +5,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\inetpub\wwwroot\ReservaApi</_PublishTargetUrl>
-    <History>True|2021-12-03T00:00:53.7325430Z;False|2021-12-03T00:59:32.7425539+01:00;</History>
+    <History>False|2021-12-03T13:03:13.3499260Z;True|2021-12-03T01:00:53.7325430+01:00;False|2021-12-03T00:59:32.7425539+01:00;</History>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="app.manifest">
+      <publishTime>12/03/2021 14:05:04</publishTime>
+    </File>
     <File Include="Areas/HelpPage/HelpPage.css">
       <publishTime>09/29/2021 23:45:21</publishTime>
     </File>
@@ -123,19 +126,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/22/2019 01:06:16</publishTime>
     </File>
     <File Include="bin/ProyectoDam.Datos.dll">
-      <publishTime>12/03/2021 00:59:31</publishTime>
+      <publishTime>12/03/2021 14:03:12</publishTime>
     </File>
     <File Include="bin/ProyectoDam.Datos.dll.config">
       <publishTime>11/19/2021 00:18:34</publishTime>
     </File>
     <File Include="bin/ProyectoDam.Datos.pdb">
-      <publishTime>12/03/2021 00:59:31</publishTime>
+      <publishTime>12/03/2021 14:03:12</publishTime>
     </File>
     <File Include="bin/proyectoDAM.dll">
-      <publishTime>12/03/2021 01:00:53</publishTime>
+      <publishTime>12/03/2021 14:19:22</publishTime>
     </File>
     <File Include="bin/proyectoDAM.pdb">
-      <publishTime>12/03/2021 01:00:53</publishTime>
+      <publishTime>12/03/2021 14:19:22</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -414,7 +417,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/29/2021 23:45:12</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/03/2021 00:59:32</publishTime>
+      <publishTime>12/03/2021 14:19:22</publishTime>
     </File>
   </ItemGroup>
 </Project>

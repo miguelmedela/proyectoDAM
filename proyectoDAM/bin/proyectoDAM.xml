@@ -4,6 +4,11 @@
         <name>proyectoDAM</name>
     </assembly>
     <members>
+        <member name="T:proyectoDAM.SwaggerConfig">
+            <summary>
+            Clase que se encarga de la configuración de Swagger
+            </summary>
+        </member>
         <member name="M:proyectoDAM.SwaggerConfig.GetXmlCommentsPath">
             <summary>
             Obtenemos la ruta del archivo XML de documentación
@@ -528,7 +533,7 @@
             <summary>
             Elimina una reserva.
             </summary>
-            <param name="idReserva">Id del objeto.</param>
+            <param name="id">Id del objeto.</param>
             <returns>Devuelve un response.</returns>
             <Response code='204'>Se ha eliminado la reserva.</Response>
         </member>

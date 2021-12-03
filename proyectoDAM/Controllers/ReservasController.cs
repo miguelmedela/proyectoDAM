@@ -59,8 +59,7 @@ namespace proyectoDAM.Controllers
             catch (Exception)
             {
                 return BadRequest();
-            }
-            
+            } 
         }
 
 
@@ -81,22 +80,24 @@ namespace proyectoDAM.Controllers
                     reserva.idResOnline = reserva.idReserva;
                     BD.Reservorio.Add(reserva);
 
-                }
-                if (await BD.SaveChangesAsync() > 0)
-                {
-                    return Ok();
+                    if (await BD.SaveChangesAsync() > 0)
+                    {
+                        return Ok();
+                    }
+                    else
+                    {
+                        return BadRequest();
+                    }
                 }
                 else
                 {
                     return BadRequest();
                 }
             }
-
             catch (Exception)
             {
                 return BadRequest();
             }
-
         }
 
         /// <summary>
@@ -154,7 +155,7 @@ namespace proyectoDAM.Controllers
         /// <summary>
         /// Elimina una reserva.
         /// </summary>
-        /// <param name="idReserva">Id del objeto.</param>
+        /// <param name="id">Id del objeto.</param>
         /// <returns>Devuelve un response.</returns>
         /// <Response code='204'>Se ha eliminado la reserva.</Response>
         [HttpDelete]
@@ -182,7 +183,6 @@ namespace proyectoDAM.Controllers
                 {
                     return NotFound();
                 }
-
             }
             catch (Exception)
             {
