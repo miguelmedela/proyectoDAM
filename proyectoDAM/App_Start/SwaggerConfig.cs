@@ -43,7 +43,7 @@ namespace proyectoDAM
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "proyectoDAM").Description("Proyecto es una aplicación" +
+                        c.SingleApiVersion("v1", "proyectoDAM").Description("Es una aplicación " +
                             "construida en .Net Framework para control de reservas").
                             Contact(x=> x.Name("Miguel Medela")).Contact(x=> x.Email("miguelmedelafernandez@gmail.com"));
                         

@@ -44,16 +44,23 @@ namespace proyectoDAM.Controllers
         [ResponseType(typeof(object))]
         public async Task<object> GetId(int id)
         {
-
-            var res = await Task.FromResult(BD.Reservorio.Where(x => x.idResOnline == id).SingleOrDefault());
-            if (res == null)
+            try
             {
-                return NotFound();
+                var res = await Task.FromResult(BD.Reservorio.Where(x => x.idResOnline == id).SingleOrDefault());
+                if (res == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return res;
+                }
             }
-            else
+            catch (Exception)
             {
-                return res;
+                return BadRequest();
             }
+            
         }
 
 
@@ -161,24 +168,26 @@ namespace proyectoDAM.Controllers
                 if (reservaEliminar != null)
                 {
                     BD.Reservorio.Remove(reservaEliminar);
-                    try
+
+                    if (await BD.SaveChangesAsync() > 0)
                     {
-                        await BD.SaveChangesAsync();
+                        return Ok();
                     }
-                    catch (Exception)
+                    else
                     {
                         return BadRequest();
                     }
                 }
+                else
+                {
+                    return NotFound();
+                }
 
             }
-            //Capturo error por si no existiera en la base de datos para borrar
-            catch (ArgumentNullException)
+            catch (Exception)
             {
                 return NotFound();
             }
-            return Ok();
         }
-
     }
 }
