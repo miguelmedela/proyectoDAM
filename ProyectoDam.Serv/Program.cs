@@ -12,9 +12,6 @@ namespace ProyectoDam.Serv
 {
     class Program
     {
-        //Falta hacer que el servidor esté esperando y
-        //hacer los get/post/put/delete que tenga que hacer 
-
 
         ReservasEntities1 BD = new ReservasEntities1();
         static void Main(string[] args)
@@ -32,7 +29,7 @@ namespace ProyectoDam.Serv
 
                 foreach (var item in lista)
                 {
-                    Console.WriteLine(item.idReserva);
+                    Console.WriteLine(item.idResOnline);
                 }
                 Console.ReadLine();
             }

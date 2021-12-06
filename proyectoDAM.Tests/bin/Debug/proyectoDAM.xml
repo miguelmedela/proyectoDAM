@@ -492,6 +492,17 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:proyectoDAM.Controllers.HomeController">
+            <summary>
+            Clase controlador de la página inicial.
+            </summary>
+        </member>
+        <member name="M:proyectoDAM.Controllers.HomeController.Index">
+            <summary>
+            Método que devuelve la vista que se va a mostrar de índice.
+            </summary>
+            <returns>La vista index</returns>
+        </member>
         <member name="T:proyectoDAM.Controllers.ReservasController">
             <summary>
             Clase controlador de reservas.
@@ -520,6 +531,7 @@
             <param name="reserva">Objeto reserva.</param>
             <returns>Devuelve un response.</returns>
             <Response code='200'>Se ha creado correctamente la reserva.</Response>
+            
         </member>
         <member name="M:proyectoDAM.Controllers.ReservasController.Put(ProyectoDam.Datos.Model.Reservorio)">
             <summary>

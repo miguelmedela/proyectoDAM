@@ -9,10 +9,10 @@ namespace proyectoDAM.Models
     {
         public class Rootobject
         {
-            public Class1[] Property1 { get; set; }
+            public Res[] Property1 { get; set; }
         }
 
-        public class Class1
+        public class Res
         {
             public int idReserva { get; set; }
             public string nombre { get; set; }
@@ -24,10 +24,11 @@ namespace proyectoDAM.Models
             public bool desayuno { get; set; }
             public bool garaje { get; set; }
             public string comentarios { get; set; }
+            public int idResOnline { get; set; }
 
-            public Class1(int idReserva, string nombre, string apellidos, int tipoHab,
+            public Res(int idReserva, string nombre, string apellidos, int tipoHab,
                 DateTime fechaEntrada, int dias, float precio,
-                bool desayuno, bool garaje, string comentarios)
+                bool desayuno, bool garaje, string comentarios, int idResOnline)
             {
                 this.idReserva = idReserva;
                 this.nombre = nombre;
@@ -39,6 +40,7 @@ namespace proyectoDAM.Models
                 this.desayuno = desayuno;
                 this.garaje = garaje;
                 this.comentarios = comentarios;
+                this.idResOnline = idResOnline;
             }
         }
 

@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\inetpub\wwwroot\ReservaApi</_PublishTargetUrl>
-    <History>False|2021-12-03T13:03:13.3499260Z;True|2021-12-03T01:00:53.7325430+01:00;False|2021-12-03T00:59:32.7425539+01:00;</History>
+    <History>True|2021-12-06T23:14:20.3479283Z;True|2021-12-06T19:31:52.4731649+01:00;False|2021-12-06T19:31:09.1837204+01:00;False|2021-12-03T14:03:13.3499260+01:00;True|2021-12-03T01:00:53.7325430+01:00;False|2021-12-03T00:59:32.7425539+01:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="app.manifest">
@@ -135,10 +135,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/03/2021 14:03:12</publishTime>
     </File>
     <File Include="bin/proyectoDAM.dll">
-      <publishTime>12/03/2021 14:19:22</publishTime>
+      <publishTime>12/07/2021 00:14:19</publishTime>
     </File>
     <File Include="bin/proyectoDAM.pdb">
-      <publishTime>12/03/2021 14:19:22</publishTime>
+      <publishTime>12/07/2021 00:14:19</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -408,7 +408,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/29/2021 23:45:12</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/03/2021 00:54:46</publishTime>
+      <publishTime>12/06/2021 18:40:46</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>09/29/2021 23:45:12</publishTime>
@@ -417,7 +417,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/29/2021 23:45:12</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/03/2021 14:19:22</publishTime>
+      <publishTime>12/06/2021 19:31:09</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyectoDAM", "proyectoDAM\proyectoDAM.csproj", "{77203BCD-DAB9-429E-8E03-289572219B0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyectoDAM.Tests", "proyectoDAM.Tests\proyectoDAM.Tests.csproj", "{685B701A-47BC-4F9A-9BCC-A047AE32A7BC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoDam.Datos", "ProyectoDam.Datos\ProyectoDam.Datos.csproj", "{28B6D849-1B95-466A-A508-5DEC319DEFFA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoDam.Serv", "ProyectoDam.Serv\ProyectoDam.Serv.csproj", "{14D7BC8A-C486-4F17-9557-9F0D944D4989}"
@@ -21,10 +19,6 @@ Global
 		{77203BCD-DAB9-429E-8E03-289572219B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77203BCD-DAB9-429E-8E03-289572219B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77203BCD-DAB9-429E-8E03-289572219B0B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{685B701A-47BC-4F9A-9BCC-A047AE32A7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{685B701A-47BC-4F9A-9BCC-A047AE32A7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{685B701A-47BC-4F9A-9BCC-A047AE32A7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{685B701A-47BC-4F9A-9BCC-A047AE32A7BC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{28B6D849-1B95-466A-A508-5DEC319DEFFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{28B6D849-1B95-466A-A508-5DEC319DEFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28B6D849-1B95-466A-A508-5DEC319DEFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU

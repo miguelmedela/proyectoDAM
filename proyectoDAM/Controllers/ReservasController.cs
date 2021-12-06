@@ -69,6 +69,7 @@ namespace proyectoDAM.Controllers
         /// <param name="reserva">Objeto reserva.</param>
         /// <returns>Devuelve un response.</returns>
         /// <Response code='200'>Se ha creado correctamente la reserva.</Response>
+        /// 
         [HttpPost]
         [ResponseType(typeof(IHttpActionResult))]
         public async Task<IHttpActionResult> Post(Reservorio reserva)
@@ -77,6 +78,7 @@ namespace proyectoDAM.Controllers
             {
                 if (reserva != null)
                 {
+                    
                     reserva.idResOnline = reserva.idReserva;
                     BD.Reservorio.Add(reserva);
 
@@ -131,7 +133,7 @@ namespace proyectoDAM.Controllers
                         reservaActualizar.precio = res.precio;
                         reservaActualizar.desayuno = res.desayuno;
                         reservaActualizar.garaje = res.garaje;
-                        reservaActualizar.comentarios = res.comentarios + " Modificado:" + DateTime.Now;
+                        reservaActualizar.comentarios = res.comentarios + " (Modificado:" + DateTime.Now+")";
 
                         await BD.SaveChangesAsync();
 

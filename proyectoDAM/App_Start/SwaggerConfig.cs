@@ -23,6 +23,9 @@ namespace proyectoDAM
             return Path.Combine(System.Web.HttpRuntime.AppDomainAppPath, "bin", "proyectoDAM.xml"); 
         }
 
+        /// <summary>
+        /// Clase estatica de Swagger que se encarga de configurar
+        /// </summary>
         public static void Register()
         {
             var thisAssembly = typeof(SwaggerConfig).Assembly;
